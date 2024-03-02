@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GIS Portfolio</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="header">
+        <nav>
+            <button class="fa Open" onclick= "showmenu()">Menu</button>
+            <button class="fa close" onclick= "hidemenu()">X</button>
+            <ul id="navItems">
+                <li>
+                    <a href="#index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Web Maps</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="quote">
+            <h1>Slap on Some Pretty Interesting GIS Quote Here</h1>
+            <p>Brief Intro About Me Will Go Here..........</p>
+            <a href="projects.html" class="button">View Projects</a>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+<script>
+    var navItems = document.getElementById("navItems");
+    function showmenu(){
+        navItems.style.right = "0";
+    }
+    function hidemenu(){
+        navItems.style.right = "-160px";
+    }
+</script>
+
+</body>
+</html>
