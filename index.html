@@ -11,42 +11,27 @@
     
     <div class="header">
         <nav>
-            <button class="fa Open" onclick= "showmenu()">Menu</button>
-            <button class="fa close" onclick= "hidemenu()">X</button>
             <ul id="navItems">
                 <li>
-                    <a href="#index.html">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">Web Maps</a>
+                    <a href="webmaps.html">Web Maps</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
                 </li>
             </ul>
         </nav>
 
         <div id="quote">
-            <h1>Slap on Some Pretty Interesting GIS Quote Here</h1>
-            <p>Brief Intro About Me Will Go Here..........</p>
+            <h1>GIS is awakening our geographic imagination, empowering us to connect, analyze, and understand the world in ways never before possible.</h1>
+            <p id = "owner">— Jack Dangermond</p>
+            <p id = "intro">Hi there! My name's Omasanjuwa and I'm a GIS student currently studying at Fleming College, specializing in ArcGIS suite of apps, Python scripting, and database management for GIS development. I'm passionate about leveraging spatial analysis to solve real-world problems. Curious to explore my projects? Click below and embark on a journey where data meets creativity!</p>
             <a href="projects.html" class="button">View Projects</a>
         </div>
-
     </div>
 
-
-
-
-
-
-
-
-<script>
-    var navItems = document.getElementById("navItems");
-    function showmenu(){
-        navItems.style.right = "0";
-    }
-    function hidemenu(){
-        navItems.style.right = "-160px";
-    }
-</script>
 
 </body>
 </html>
