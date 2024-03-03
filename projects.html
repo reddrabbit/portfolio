@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="design.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e6cc6c6072.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="head">
@@ -14,7 +14,7 @@
                 <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="#">Web Maps</a>
+                <a href="webmaps.html">Web Maps</a>
             </li>
         </ul>
     </div>
@@ -22,39 +22,71 @@
 <!-- Project Listing -->
 <section class="projects">
     <h1>Projects</h1>
-    <p>A few projects i worked on that i am particularly proud of as a GIS Student at Fleming College.</p>
+    <p>A few projects i worked on that i am particularly proud of as a GIS Student at Fleming College. The software used for each project has been highlighted as well.</p>
+    <p> <b>Click on the images to view the results in detail!</b></p>
 </section>
 
 <section class="prjs">
     <div class="row">
         <div class="prjCol">
-            <h1>Geoviz Special Map</h1>
-            <p>Some stuff about my geoviz project will go here</p>
-            <a href="#">LinkToWorkflow</a>
+            <h1>Geovisualisation Project: Sustainable Serenity in Southern Nigeria </h1>
+            <p>The goal of this cartographic project is to highlight the significant effects that urban expansion and growth have on Southern Nigeria's beloved protected areas. This project intends to educate the public and those with a stake in conservation efforts using precise mapping techniques and geospatial analysis. Uncovering the complex relationship between environmental preservation and human growth by graphically depicting the invasion of urbanisation into these pristine areas. Recognising the delicate balance needed to protect these priceless natural sanctuaries for future generations is crucial as expansive cities grow. </p>
+            <p>The product was completed by utilizing ArcGIS Pro's cartographic functionality, with a keen understanding of cartographic rules and map generalisation techniques. Data was sourced from ESRI, Protecetd Planet, and Natural Earth.</p>
+            <p class = "software">ArcGIS Pro</p>
         </div>
         <div class="prjCol">
-            <img src="GeovizMap.jpg" alt="Geoviz final project from first semester">
+            <a href="GeovizMap.jpg" target="_blank"><img src="GeovizMap.jpg" alt="Geoviz final project from first semester"></a>
         </div>
         <div class="prjCol">
-            <h1>Remote Sensing PDF</h1>
-            <p>Some stuff about my Remote Sensing Result</p>
-            <a href="#">LinkToWorkflow</a>
+            <h1>Exploring LiDAR Possibilities: Surface Modelling</h1>
+            <p>For this project, we were presented with the necessary LiDAR point cloud data which we used to create surface models from first and ground return data. </p>
+            <p>The workflow involved acquiring LiDAR data from the Ontario Geohub data portal in a compressed format. Utilizing laszip, an open-source decompressing tool for LiDAR data, we were able to decompress the LiDAR point cloud data to be used in ArcGIS Pro. 
+                Over in Pro, the LAS Dataset Statistics tool was used to recalculate the statistical parameters for the now decompressed LiDAR data. After which, tiling the LiDAR dataset was carried out to ensure proper indexing of our data and to allow for parallel processing. 
+                Creating the surfaces:
+                Digital Terrain Model: A Digital Terrain Model (commonly referred to by its acronym “DTM”) is a surface that is representative of the bare earth’s reflection. That is, the ground returns from the LiDAR laser. Using ArcGIS Pro again, we filtered out all other return data except for the ground returns. We then employed the LAS Dataset to Raster tool to create the surface.
+                Digital Surface Model: A Digital Surface Model (commonly referred to by its acronym “DSM”) is a representational model of reflective surfaces such as tree covers, buildings, and roads. Following a similar workflow above and filtering out all other returns except first return and non-noise data, we were able to produce this surface.</p>
+                <p>The results depict both surfaces showing the earth's terrain and the tree covers, as well as cable network of the study area which was just outside of Bailieboro, Ontario.</p>
+            
+                
+            <p class = "software">ArcGIS Pro </p> 
+            <span class="las">LasZip</span>
+
         </div>
         <div class="prjCol">
-            <img src="RemoteSensing.png" alt="RemoteSensing project from first semester">
+            <a href="RemoteSensing.png" target="_blank"><img src="RemoteSensing.png" alt="RemoteSensing project from first semester"></a>
         </div>
         <div class="prjCol">
-            <h1>Python Scripting From Rahul</h1>
-            <p>Some stuff about The process, what it does, etc</p>
-            <a href="#">Priscilla'sHandle</a>
+            <h1>Strengthening Public Safety: Analyzing Police Service Areas and Response Efficiency for Motor Theft Incidents in Toronto</h1>
+            <p>Network analysis is a useful concept aimed at understanding the structure and interactions within networks such as transportation (roads), utility(gas), or communication(teleophone) networks for making informed decisions and solving complex problems.</p>
+            <p>For this project I have created a network dataset from a Toronto road network feature layer which was used to analyse 5 and 10 minute service areas for police responses to motor thefts in Toronto. I have also carried out a closest facility analysis for the same purpose. This helps give an understanding of response times to motor theft related crimes in the area, and profers options for best routes to take in the case of an emergency</p>
+            <p>Before carrying out the analysis, the road network's topology had to be set with certain rules in mind, after which, fixing the topological errors (parts of the network that violate the set rules) to ensure an accurate topological network. For this project, we were instructed to pay particular attention to pseudonodes and dangles within our dataset.</p>
+            <p class = "software">ArcGIS Pro </p> 
         </div>
         <div class="prjCol">
-            <img src="RemoteSensing.png" alt="RemoteSensing project from first semester">
+            <a href="spatialAnalysis.png" target="_blank"><img src="spatialAnalysis.png" alt="Closest facility and Service Area analysis for Toronto"></a>
+        </div>
+        <div class="prjCol">
+            <h1>Building Dreams: Exploring Ideal Cottage Locations in Quebec through 3D Suitability Analysis</h1>
+            <p>The methodology for identifying suitable sites for cottage construction in Quebec was developed through ArcGIS by utilizing Geographic Information Systems (GIS) techniques. The workflow commenced with the application of cartographic generalization methods to streamline water feature datasets, ensuring data clarity and efficiency. Subsequently, slope and aspect analyses were conducted to pinpoint areas shielded from excessive sunlight and situated at lower elevations, characteristics conducive to cottage placement. Furthermore, proximity analysis was performed to assess site accessibility to water bodies and road networks, enhancing transportation and recreational opportunities. A Boolean analysis workflow was then used to highlight the areas on the map that met all the requirements for setting up a cottage. This comprehensive GIS analysis culminated in the identification and prioritization of optimal cottage development locations. The result of this process offers valuable insights for land management and recreational planning stakeholders.</p>
+            <p class = "software">ArcGIS Pro </p> 
+        </div>
+        <div class="prjCol">
+            <a href="envmodelling.png" target="_blank"><img src="envmodelling.png" alt="Cottage suitability analysis for Quebec, Canada"></a>
         </div>
     </div>
 </section>
-<div class="colour">
-    <b>g</b>
+<div class="footer">
+    <div class="contact">
+        <p>Contact: </p>
+        <a href="https://www.linkedin.com/in/omasanjuwa-esun-1748a21b4/" target="_blank"> 
+            <i class="fa-brands fa-linkedin fa-xl"></i>
+        </a>
+    </div>
+
+    <div class="design">
+        <p>Made on Feb, 27th 2024</p>
+    </div>
+  
 </div>
 
 
